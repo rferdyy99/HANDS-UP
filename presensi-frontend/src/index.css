@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@source "../src/**/*.{js,jsx,ts,tsx}";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Warna Neo-Academic */
+  --color-neo-blue: #2563EB;
+  --color-neo-indigo: #4F46E5;
+  --color-lime-neon: #B8F60D;
+  --color-indigo-primary: #6574FF;
+  --color-dark-bg: #15081E;
+
+  /* Font Inter */
+  --font-sans: "Inter", sans-serif;
+}
+
+/* Mengatur warna dasar halaman agar mulus saat berganti tema */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased transition-colors duration-300;
+  }
+}
